@@ -4,10 +4,11 @@ const User=require('../models/User');
 
 
 //ROUTE:1    create a user using POST "/api/auth"
-router.post('/',(req,res)=>{
-    console.log(req.body);
-    const user=User(req.body);
-    // user.save();
+router.get('/',async (req,res)=>{
+   
+    const user= await User(req.body);
+    user.save(()=>{});
+     console.log(req.body);
     res.json(req.body);
 })
 
