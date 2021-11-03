@@ -1,15 +1,31 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Navbar from './components/Navbar';
 import Content from './components/Content';
+import Recipes from './components/Recipes';
 
 
 function App() {
-  fetch("http://127.0.0.1:5000/hello").then((data)=>{console.log(data)});
+  // fetch("http://127.0.0.1:5000/hello").then((data)=>{console.log(data)});
   return (
     
     <>
+    <Router>
     <Navbar/>
- <Content/>
+      <Switch>
+
+          <Route exact path="/">
+            <Content />
+          </Route>
+          <Route exact path="/home">
+            <Content />
+          </Route>
+          <Route exact path="/recipes">
+            <Recipes/>
+          </Route>
+        </Switch>
+
+ </Router>
     </>
   );
 }
