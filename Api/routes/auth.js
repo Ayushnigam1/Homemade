@@ -13,10 +13,13 @@ const client = new MongoClient(uri, {
 
 
 //ROUTE:1    create a user using POST "/api/auth"
-router.get("/",(req, res) => {
-	const collection = client.db("homemade").collection("user");
-	const user =User(req.body);
-	collection.insertOne(user);
+router.get("/", async (req, res) => {
+	client.connect((err) => {
+		const collection = client.db("homemade").collection("user");
+		const user = await User(req.body);
+		collection.insertOne(user);
+	});
+
 	console.log(req.body);
 	res.json(req.body);
 });
