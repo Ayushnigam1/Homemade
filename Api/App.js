@@ -16,7 +16,6 @@ client.connect(err => {
 		console.log(e)
 	})
 	console.log("successfully connected to mongo")
-  client.close();
 });
 
 app.use(cors())
