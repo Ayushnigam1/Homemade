@@ -1,159 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:wght@400;500;800&family=Ubuntu:ital,wght@0,300;1,400;1,700&display=swap');
-*{
-    margin:0;
-    padding:0;
-   
-}
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Playfair Display',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-body{
- background:white;
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Playfair Display', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+body {
+    background: white;
+}
+
 
 /* navbar css */
 
-.container{
-display:flex;
-  /* justify-content:space-around; */
-  margin:20px 7% 20px 7%;
+.container {
+    display: flex;
+    /* justify-content:space-around; */
+    margin: 20px 7% 20px 7%;
 }
-nav{
+
+nav {
     font-family: 'poppins', sans-serif;
-    background:white;
-    color:black;
-   
+    background: white;
+    color: black;
 }
-nav ul{
-    display:flex; 
-  align-items:center;
-  height:50px;
+
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 50px;
 }
+
 nav ul li {
-  
-    list-style-type:none;
-    marign:28px;
-    padding:18px;
-    
+    list-style-type: none;
+    /* margin: 28px; */
+    padding: 18px;
 }
-nav ul li a{
-  text-decoration:none;
-  list-style-type:none;
-  color:black;
-  font-size:18px
+
+nav ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-size: 18px
 }
-.brand{
-    display:flex;
-    font-size:25px;
-    font-weight:bold;
+
+.brand {
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
     font-family: 'Poppins', sans-serif;
-    align-items:center;
-    margin:0 50% 0 10px;
+    align-items: center;
+    margin: 0 50% 0 10px;
 }
-.brand span{
-  color:#FF4706;
-}
-.login{
-   
-    font-size:18px;
-    position:absolute;
-    font-weight:bold;
-    align-items:center;
-    margin:-14px 0 0 28%;
-    padding:8px 15px 8px 15px;
-    background-color:#FF4706;
-    border-radius:5px;
-}
-.login a{
-  position:fixed;
-  margin-right:0px;
 
+.brand span {
+    color: #FF4706;
 }
+
+.login {
+    font-size: 18px;
+    position: absolute;
+    font-weight: bold;
+    align-items: center;
+    margin: -14px 0 0 28%;
+    padding: 8px 15px 8px 15px;
+    background-color: #FF4706;
+    border-radius: 5px;
+}
+
+.login a {
+    position: fixed;
+    margin-right: 0px;
+}
+
+
 /* header css */
-.header{
-  margin-top:20px;
- margin-left:20px;
-  display:flex;
-  flex-direction:row;
+
+.header {
+    margin-top: 20px;
+    /* margin-left: 20px; */
+    margin-left: 0px;
+    display: flex;
+    flex-direction: row;
 }
 
-.text{
-  
-     /* border: 5px solid blue; */
+.text {
+    /* border: 5px solid blue; */
     width: 1200px;
     height: 500px;
-   
 }
-.textdata{
-     margin-top: 91px;
+
+.textdata {
+    margin-top: 91px;
     margin-left: 67px;
+    /* margin-left: 10px; */
     margin-right: 20px;
 }
-.text h2{
-font-family: 'Playfair Display', serif;
-   font-style: normal;
-font-weight: medium;
-font-size: 64px;
+
+.text h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: medium;
+    font-size: 64px;
 }
-.text p{
-  margin-top:15px;
-  font-family:'Poppins';
-  font-size:18px;
+
+.text p {
+    margin-top: 15px;
+    font-family: 'Poppins';
+    font-size: 18px;
 }
-.banner{
-  
+
+.banner {
     display: flex;
     flex-direction: row;
     /* border:5px solid red; */
     width: 90%;
-  
 }
-.banner .bannerimage{
-  width:100%;
-  background-color:#EBEBEB;
-  border-radius:20px;
- 
-} 
+
+.banner .bannerimage {
+    width: 100%;
+    background-color: #EBEBEB;
+    border-radius: 20px;
+}
+
 
 /* popular recipe part */
-.subtitle{
-  position:relative;
-  font-family: 'Playfair Display', serif;
-   font-style: normal;
-font-weight: medium;
-font-size: 44px;
-align-items:center;
+
+.subtitle {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: medium;
+    font-size: 44px;
+    align-items: center;
     padding: 5%;
     left: 32%;
 }
 
-.cardcontain{
-  display: grid;
-  grid: 450px /auto auto auto;
-  grid-gap: 20px;
-   margin:20px 7% 20px 7%;
-}
-.card{
-  width:90%;
-  height:450px;
-   background-color:white;
-   box-shadow: 0px 6px 5px 6px rgba(0, 0, 0, 0.07);
-border-radius:10px;
-}
-.card .cardimg{
-  width:100%;
-  height:300px;
-  border-radius:10px;
-  background-color:#EBEBEB;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cardcontain {
+    display: grid;
+    grid: 450px /auto auto auto;
+    grid-gap: 20px;
+    margin: 20px 7% 20px 7%;
 }
 
+.card {
+    width: 90%;
+    height: 450px;
+    background-color: white;
+    box-shadow: 0px 6px 5px 6px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+}
+
+.card .cardimg {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #EBEBEB;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
