@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Navbar from './components/Navbar';
 import Content from './components/Content';
 import Recipes from './components/Recipes';
+import Login from './components/Login';
 
 
 function App() {
@@ -22,6 +23,12 @@ function App() {
           </Route>
           <Route exact path="/recipes">
             <Recipes/>
+          </Route>
+          <Route exact path="/recipes">
+            <Recipes/>
+          </Route>
+          <Route exact path="/login">
+            <Login/>
           </Route>
         </Switch>
 
