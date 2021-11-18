@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Content from './components/Content';
 import Recipes from './components/Recipes';
 import Login from './components/Login';
+import Signup from './components/Signup';
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login/>
+          </Route>
+          <Route exact path="/signUp">
+            <Signup/>
           </Route>
         </Switch>
 

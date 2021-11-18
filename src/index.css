@@ -67,7 +67,7 @@ nav ul li a {
     position: absolute;
     font-weight: bold;
     align-items: center;
-    margin: -14px 0 0 28%;
+    margin: -14px 0 0 24%;
     padding: 8px 15px 8px 15px;
     background-color: #FF4706;
     border-radius: 5px;
@@ -76,6 +76,28 @@ nav ul li a {
 .login a {
     position: fixed;
     margin-right: 0px;
+}
+
+.signup {
+    font-size: 18px;
+    position: absolute;
+    font-weight: bold;
+    align-items: center;
+    margin: -14px 0 0 28%;
+    padding: 8px 15px 8px 15px;
+    background-color: #FF4706;
+    border-radius: 5px;
+}
+
+.signup a {
+    position: fixed;
+    margin-right: 0px;
+}
+
+#toggle {
+    position: absolute;
+    margin-top: -26px;
+    left: 28%;
 }
 
 
