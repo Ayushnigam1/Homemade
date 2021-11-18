@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 
 const Login = () => {
-    const [credential,setCredential]= useState({Email: "Abhaaf54@gmail.com",Pasward: "Abh3ay345"});
+    const [credential,setCredential]= useState({Email: "",Pasward: ""});
     
     const handleSubmit = async (e)=>{
     e.preventDefault();
@@ -25,12 +25,12 @@ const Login = () => {
          <form onSubmit={handleSubmit} >
          <div className="mb-3">
            <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-           <input type="email" className="form-control" value={credential.Email} onChange={onChange}  id="exampleInputEmail1" aria-describedby="emailHelp"/>
+           <input type="email" className="form-control" value={credential.Email} onChange={onChange}  id="exampleInputEmail1" Name="Email" aria-describedby="emailHelp"/>
            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
          </div>
          <div className="mb-3">
            <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-           <input type="password" className="form-control" value={credential.Pasward} onChange={onChange} id="exampleInputPassword1"/>
+           <input type="password" className="form-control" value={credential.Pasward} onChange={onChange} id="exampleInputPassword1" Name="Pasward"/>
          </div>
          <button type="submit" className="btn btn-primary" >Submit</button>
        </form>
