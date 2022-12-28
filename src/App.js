@@ -1,42 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Navbar from './components/Navbar';
-import Content from './components/Content';
-import Recipes from './components/Recipes';
-import Login from './components/Login';
-import Signup from './components/Signup';
-
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import "./index.css";
+import Home from "./components/Home";
 
 function App() {
-  // fetch("http://127.0.0.1:5000/hello").then((data)=>{console.log(data)});
   return (
-    
     <>
-    <Router>
-    <Navbar/>
-      <Switch>
-
+      <Router>
+        <Navbar />
+        <Switch>
           <Route exact path="/">
-            <Content />
+            <Signup />
           </Route>
           <Route exact path="/home">
-            <Content />
-          </Route>
-          <Route exact path="/recipes">
-            <Recipes/>
-          </Route>
-          <Route exact path="/recipes">
-            <Recipes/>
+            <Home />
           </Route>
           <Route exact path="/login">
-            <Login/>
+            <Login />
           </Route>
           <Route exact path="/signUp">
-            <Signup/>
+            <Signup />
           </Route>
         </Switch>
-
- </Router>
+      </Router>
     </>
   );
 }

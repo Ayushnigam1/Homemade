@@ -4,8 +4,6 @@ const app = express();
 const port = 5000;
 const cors = require("cors");
 const connectToMongo = require("./db");
-// const { MongoClient } = require('mongodb');
-// const uri = "mongodb+srv://mongo:mongo@cluster0.qmfui.mongodb.net/homemade?retryWrites=true&w=majority";
 
 app.use(cors());
 connectToMongo();

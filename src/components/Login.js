@@ -3,6 +3,8 @@ import { useHistory } from 'react-router';
 
 const Login = () => {
     const [credential,setCredential]= useState({Email: "",Pasward: ""});
+    const [passwordShown, setPasswordShown] = useState(false);
+    const [signShown, setSignShown] = useState(true);
     const history=useHistory();
     const handleSubmit = async (e)=>{
     e.preventDefault();
@@ -27,8 +29,14 @@ const Login = () => {
         e.preventDefault();
       setCredential({...credential,[e.target.name]:e.target.value});
     }
+    const onClick=(e)=>{
+        e.preventDefault();
+        setPasswordShown(!passwordShown);
+        setSignShown(!signShown)
+    };
     return (
          <>
+         
          <div className="container">
          <form onSubmit={handleSubmit} >
          <div className="mb-3">
@@ -38,11 +46,14 @@ const Login = () => {
          </div>
          <div className="mb-3">
            <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-           <input type="password" className="form-control" value={credential.Pasward} onChange={onChange} id="exampleInputPassword1" name="Pasward"/>
+           <input type={passwordShown ? "text" : "password"} className="form-control" value={credential.Pasward} onChange={onChange} id="exampleInputPassword1" name="Pasward"/>
+           <i className={signShown?"far fa-eye":"far fa-eye-slash"} id="toggle" onClick={onClick} />
+
          </div>
          <button type="submit" className="btn btn-primary" >Submit</button>
        </form>
        </div>
+     
         </>
     )
 }

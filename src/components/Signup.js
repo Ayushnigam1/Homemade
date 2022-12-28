@@ -1,11 +1,12 @@
 import React,{useState} from 'react';
 import { useHistory } from 'react-router';
-
+// import { useDataStore } from '../StateProvider';
 const Signup = () => {
     const [credential,setCredential]= useState({Name:"",Email: "",Pasward: ""});
     const [passwordShown, setPasswordShown] = useState(false);
     const [signShown, setSignShown] = useState(true);
     const history=useHistory();
+ 
     const handleSubmit = async (e)=>{
     e.preventDefault();
     const response=await fetch("http://localhost:5000/api/auth/createUser",{
